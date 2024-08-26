@@ -1,0 +1,337 @@
+:root {
+    --cor-azul-escuro-1:#609ED4;
+    --cor-azul-escuro-2:#356EA9;
+    --cor-azul-escuro-3:#0A3871;
+    --cor-azul-escuro-4:#072B61;
+    --cor-azul-escuro-5:#052051;
+
+    --cor-azul-claro-1: #F3F5FC;
+    --cor-azul-claro-2: #EFF1FA;
+    --cor-azul-claro-3: #E9ECF8;
+    --cor-azul-claro-4: #AAB2D5;
+    --cor-azul-claro-5: #757FB2;
+
+    --cor-cinza-1: #CED4DA;
+    --cor-cinza-2: #ADB5BD;
+    --cor-cinza-3: #868E96;
+    --cor-cinza-4: #495057;
+    --cor-cinza-5: #343A40;
+
+    --fonte-botao: 400 1rem/1.22 'Inter';
+
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-azul-claro-3);
+    height: 100vh;
+    max-width: 1600px;
+}
+
+textarea {
+    padding-left: 10px;
+    font: 400 2rem/1.5 'Inter';
+    color: var(--cor-azul-escuro-3);
+    border: none;
+}
+
+.logo-container, .conteudo, .rodape {
+    width: 70%;
+    float: left;
+}
+
+.logo-container {
+    margin-top: 40px;
+    margin-left: 40px; 
+}
+
+.conteudo {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.conteudo-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 150px;
+}
+
+.conteudo textarea {
+    width: 680px;
+    background-color: var(--cor-azul-claro-3);
+}
+
+.conteudo textarea:focus,  #conteudo-lateral-final textarea:focus{
+    outline: none;
+}
+
+.conteudo textarea::placeholder {
+    color: var(--cor-azul-escuro-3);
+}
+
+.conteudo span {
+    margin-top: 50px;
+    font: 400 0.8rem/1.5 'Inter';
+    color: var(--cor-cinza-4);
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    position: relative;
+}
+
+.conteudo span::before {
+    content: "";
+    background: url(imgs/exclamacao.png) no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 1.5px
+}
+
+.conteudo-botoes {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.conteudo-botoes button {
+    width: 328px;
+    padding: 24px;
+    border-radius: 24px;
+    font: var(--fonte-botao);
+    border: 1px solid var(--cor-azul-escuro-3);
+    cursor: pointer;
+}
+#criptografar {
+    background-color: var(--cor-azul-escuro-3);
+    color: var(--cor-azul-claro-1);
+}
+
+#criptografar:hover {
+    background-color: #D8DFE8;
+    color: var(--cor-azul-escuro-3);
+}
+
+#descriptografar {
+    background-color: #D8DFE8;
+    color: var(--cor-azul-escuro-3);
+}
+
+#descriptografar:hover {
+    background-color: var(--cor-azul-escuro-3);
+    color: var(--cor-azul-claro-1);
+}
+
+.conteudo-lateral {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    padding: 20px;
+    width: 400px;
+    height: 850px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 32px;
+    margin-right: 60px;
+    margin-top: -50px;
+    gap: 16px;
+}
+
+#conteudo-lateral-inicial {
+    width: fit-content;
+}
+
+#conteudo-lateral-inicial h1 {
+    font: 700 1.5rem/1.20 'Inter';
+    margin-top: 30px;
+}
+
+#conteudo-lateral-inicial p {
+    margin-top: 20px;
+    font: 400 1rem/1.5 'Inter';
+    padding: 0px 20px;
+}
+
+#conteudo-lateral-final {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    display: none;
+}
+
+#conteudo-lateral-final textarea{
+    height: 650px;
+    width: 350px;
+    align-self: center;
+}
+
+#copiar {
+    width: 328px;
+    padding: 24px;
+    font: var(--fonte-botao);
+    background-color: #D8DFE8;
+    color: var(--cor-azul-escuro-3);
+    border: 1px solid var(--cor-azul-escuro-3);
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.rodape {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    justify-content: center; 
+    align-items: center;
+}
+
+.direitos {
+    text-align: center;
+    font: 700 1rem/1.5 'Inter';
+    color: var(--cor-azul-escuro-4);
+    padding-left: 210px;
+}
+
+@media (max-width: 770px) {
+    .logo-container, .conteudo, .rodape {
+        width: 100%;
+    }
+
+    .logo-container {
+        margin-left: 10px;
+    }
+
+    .conteudo-container {
+        margin-left: 40px;
+    }
+
+    .conteudo-lateral {
+        float: left;
+        width: 688px;
+        height: 133px;
+        padding: 32px;
+        gap: 32px;
+        margin: 50px 40px;
+    }
+    
+    #conteudo-lateral-final {
+        width: 690px;
+        height: 340px;
+        padding: 32px;
+        gap: 32px;
+        background-color: #FFFFFF;
+        border-radius: 32px;
+        margin-top: 180px;
+    }
+
+    #conteudo-lateral-final textarea{
+        width: 600px;
+        height: 200px;
+        margin-top: -20px;
+    }
+
+    .conteudo-lateral img {
+        display: none;
+    }
+
+    #conteudo-lateral-inicial h1{
+        margin-top: 0px;
+    }
+
+    #copiar {
+        width: 620px;
+        background-color: #FFFFFF;
+        color: var(--cor-azul-escuro-3);
+    }
+
+    .rodape {
+        margin-top: 150px;
+    }
+    
+    .direitos {
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 375px) {
+    .logo-container {
+        margin-left: 0px;
+    }
+
+    .conteudo-container {
+        margin-left: 20px;
+    }
+
+    .conteudo-botoes {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .conteudo-lateral {
+        width: 320px;
+        height: 210px;
+        margin: 50px 20px;
+        padding-bottom: 0px;
+        box-shadow: 0px 24px 32px -8px #0000003f;
+    }
+
+    #conteudo-lateral-inicial p {
+        padding: 0px;
+    }
+    
+    #conteudo-lateral-final {
+        width: 320px;
+        height: 595px;
+        padding: 32px;
+        gap: 32px;
+        background-color: #FFFFFF;
+        border-radius: 32px;
+        margin-top: 350px;
+    }
+
+    #conteudo-lateral-final textarea{
+        width: 250px;
+        height: 475px;
+        margin-top: -20px;
+    }
+
+    .conteudo-lateral img {
+        display: none;
+    }
+
+    #conteudo-lateral-inicial h1{
+        margin-top: 0px;
+    }
+
+    #copiar {
+        width: 250px;
+        
+    }
+
+    .rodape {
+        margin-top: 370px;
+    }
+    
+    .direitos {
+        padding-left: 0px;
+    }
+}
+
+
+
+
